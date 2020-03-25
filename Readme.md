@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Щетинин](https://up.htmlacademy.ru/adaptive/19/user/1162253).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Шевченко](https://htmlacademy.ru/profile/id125164).
 
 ---
 
