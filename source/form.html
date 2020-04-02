@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Отзыв</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/102x83" width="" height="" alt="">
+        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <button class="main-nav__toggle" type="button">Закрыть меню</button>
+        <button class="main-nav__toggle main-nav__toggle--open" type="button">Открыть меню</button>
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">Закрыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="site-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="site-list__item">
-              <a>Форма отзыва</a>
+              <a class="site-list__link">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="site-list__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -34,10 +35,10 @@
 
     <main class="page-main">
 
-      <h1 class="page-main__title">Фото и видео</h1>
+      <h1 class="page-main__title">Оставьте свой отзыв</h1>
       <div class="page-main__wrapper-sedona-welcome-image">
-        <img class="page-main__sedona-img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
-        <img class="page-main__sedona-text" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+        <img class="page-main__sedona-img" src="img/bg-back-mobile@1x.jpg" width="320" height="200" alt="Фото, на котором красивые горы">
+        <img class="page-main__sedona-text page-main__sedona-text--not-main-page" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
       </div>
 
       <section class="leave-comment">
@@ -63,7 +64,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано:</p>
-        <a class="copyright__link copyright__link--htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
 

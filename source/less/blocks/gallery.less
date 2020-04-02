@@ -1,0 +1,90 @@
+
+.gallery__title {
+  margin-bottom: 40px;
+
+  padding: 0 24px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: #333333;
+}
+
+.gallery__list {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.gallery__item {
+  position: relative;
+  margin-bottom: 40px;
+
+  padding: 0 20px;
+}
+
+.gallery__item:first-child::before {
+  content: "";
+
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  width: 320px;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gallery__item::after {
+  content: "";
+
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+
+  width: 320px;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gallery__image-title,
+.gallery__image-counts {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.gallery__image-author {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: left;
+  text-transform: none;
+  color: #333333;
+}
+
+.gallery__image-counts {
+  position: relative;
+
+  padding-left: 40px;
+}
+
+.gallery__image-counts::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 23px;
+  height: 21px;
+
+  background: url("../img/icon-like.svg") 0 0 no-repeat;
+  opacity: 0.3;
+}

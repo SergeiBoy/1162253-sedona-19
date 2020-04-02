@@ -1,0 +1,50 @@
+
+.page-main {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+
+  text-transform: uppercase;
+}
+
+.page-main__title {
+  margin-top: 43px;
+
+  padding: 0 30px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-main__wrapper-sedona-welcome-image {
+  position: relative;
+  margin-top: 56px;
+  order: -1;
+}
+
+.page-main__sedona-text {
+  position: absolute;
+  bottom: 85px;
+  left: 20px;
+}
+
+.page-main__sedona-text--not-main-page {
+  left: 46px;
+}
+
+.page-main__wrapper-sedona-welcome-image::after {
+  content: "";
+
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+
+  width: 320px;
+  height: 26px;
+
+  background: url("../img/bg-intro-triangle-mobile.svg") 0 0 no-repeat;
+}
