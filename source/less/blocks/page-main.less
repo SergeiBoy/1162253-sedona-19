@@ -48,3 +48,47 @@
 
   background: url("../img/bg-intro-triangle-mobile.svg") 0 0 no-repeat;
 }
+
+@media (min-width: @tablet-width) {
+
+  .page-main__title {
+    padding: 0 80px;
+
+    font-size: 21px;
+  }
+
+  .page-main {
+    width: @tablet-width;
+  }
+
+  .page-main__wrapper-sedona-welcome-image {
+    margin-top: 0;
+  }
+
+  .page-main__sedona-img {
+    width: 768px;
+    height: 518px;
+  }
+
+  .page-main__sedona-img--inner-page {
+    height: 290px;
+  }
+
+  .page-main__sedona-text {
+    left: (@tablet-width - 460px) / 2;
+
+    width: 460px;
+    height: 350px;
+  }
+
+  .page-main__sedona-text--inner-page {
+      height: 80px;
+  }
+
+  .page-main__wrapper-sedona-welcome-image::after {
+    width: 768px;
+    height: 57px;
+
+    background: url("../img/bg-intro-triangle-tablet.svg") 0 0 no-repeat;
+  }
+}
