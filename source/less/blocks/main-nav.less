@@ -6,8 +6,6 @@
 .main-nav__toggle {
   position: absolute;
 
-  font-size: 0;
-
   border: none;
 }
 
@@ -29,4 +27,10 @@
   height: 22px;
 
   background: transparent url("../img/icon-cross-white.svg") 0 0 no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
 }

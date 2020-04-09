@@ -15,3 +15,17 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+  }
+}

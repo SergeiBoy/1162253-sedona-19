@@ -12,3 +12,24 @@
   left: 109px;
   z-index: 1;
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+  }
+
+  .page-header__logo {
+    top: 0;
+    left: @tablet-width/2 - 51px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+  }
+
+  .page-header__logo {
+    left: @desktop-width/2 - 51px;
+  }
+}
