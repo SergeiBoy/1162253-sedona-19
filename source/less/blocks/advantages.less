@@ -95,43 +95,35 @@
   padding: 0 20px 0 70px;
 }
 
-.advantages__facility-title--house::before {
-  content: "";
+.advantages__facility-title {
+  &::before {
+    content: "";
 
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-  width: 37px;
-  height: 36px;
+  &--house::before {
+    width: 37px;
+    height: 36px;
 
-  background: url("../img/icon-house.svg") 0 0 no-repeat;
-}
+    background: url("../img/icon-house.svg") 0 0 no-repeat;
+  }
 
-.advantages__facility-title--souvenir::before {
-  content: "";
+  &--souvenir::before {
+    width: 32px;
+    height: 38px;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+    background: url("../img/icon-gift.svg") 0 0 no-repeat;
+  }
 
-  width: 32px;
-  height: 38px;
+  &--food::before {
+    width: 40px;
+    height: 35px;
 
-  background: url("../img/icon-gift.svg") 0 0 no-repeat;
-}
-
-.advantages__facility-title--food::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 40px;
-  height: 35px;
-
-  background: url("../img/icon-burger.svg") 0 0 no-repeat;
+    background: url("../img/icon-burger.svg") 0 0 no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -195,28 +187,26 @@
     padding: 90px 20px 20px 20px;
   }
 
-  .advantages__facility-title--house::before {
-    top: 10px;
-    left: 90px;
+  .advantages__facility-title {
+    &::before {
+      top: 10px;
+      left: 90px;
+    }
 
-    width: 75px;
-    height: 72px;
-  }
+    &--house::before {
+      width: 75px;
+      height: 72px;
+    }
 
-  .advantages__facility-title--souvenir::before {
-    top: 10px;
-    left: 90px;
+    &--souvenir::before {
+      width: 64px;
+      height: 75px;
+    }
 
-    width: 64px;
-    height: 75px;
-  }
-
-  .advantages__facility-title--food::before {
-    top: 10px;
-    left: 90px;
-
-    width: 77px;
-    height: 68px;
+    &--food::before {
+      width: 77px;
+      height: 68px;
+    }
   }
 
   .advantages__item:nth-child(n+3) {
@@ -240,15 +230,9 @@
     width: 800px;
   }
 
-  .advantages__facility-title--house::before {
-    left: 160px;
-  }
-
-  .advantages__facility-title--souvenir::before {
-    left: 160px;
-  }
-
-  .advantages__facility-title--food::before {
-    left: 160px;
+  .advantages__facility-title {
+    &::before {
+      left: 160px;
+    }
   }
 }
