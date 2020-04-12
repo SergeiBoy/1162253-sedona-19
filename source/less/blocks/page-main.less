@@ -4,7 +4,7 @@
 
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
 
   text-transform: uppercase;
 }
@@ -22,7 +22,7 @@
 
 .page-main__wrapper-sedona-welcome-image {
   position: relative;
-  margin-top: 56px;
+  margin-top: -35px;
   order: -1;
 
   width: 100%;
@@ -49,12 +49,22 @@
 
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   width: 320px;
   height: 26px;
 
   background: url("../img/bg-intro-triangle-mobile.svg") 0 0 no-repeat;
+}
+
+@media (min-width: @mobile-width + 1px) {
+  .page-main__wrapper-sedona-welcome-image::after {
+    width: 768px;
+    height: 57px;
+
+    background: url("../img/bg-intro-triangle-tablet.svg") 0 0 no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -68,16 +78,12 @@
     }
   }
 
-  .page-main {
-    width: @tablet-width;
-  }
-
   .page-main__wrapper-sedona-welcome-image {
     margin-top: 0;
 
     height: 518px;
 
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
 
     &--inner-page {
       height: 290px;
@@ -92,35 +98,28 @@
       height: 80px;
     }
   }
-
-  .page-main__wrapper-sedona-welcome-image::after {
-    width: 768px;
-    height: 57px;
-
-    background: url("../img/bg-intro-triangle-tablet.svg") 0 0 no-repeat;
-  }
 }
 
-@media (min-width: @desktop-width) {
-  .page-main__title {
-    padding: 0 350px;
-  }
-
-  .page-main {
-    width: @desktop-width;
-  }
-
-  .page-main__wrapper-sedona-welcome-image {
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-
-    &--inner-page {
-      height: 301px;
-    }
-  }
-
+@media (min-width: @tablet-width + 1px) {
   .page-main__wrapper-sedona-welcome-image::after {
     width: 1200px;
 
     background: url("../img/bg-intro-triangle-desktop.svg") 0 0 no-repeat;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: @desktop-width;
+  }
+
+  .page-main__title {
+    padding: 0 350px;
+  }
+
+  .page-main__wrapper-sedona-welcome-image {
+    &--inner-page {
+      height: 301px;
+    }
   }
 }
