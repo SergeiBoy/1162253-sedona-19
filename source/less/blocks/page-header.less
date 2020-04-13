@@ -3,33 +3,28 @@
   position: relative;
   margin: 0 auto;
 
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
 }
 
 .page-header__logo {
   position: absolute;
-  top: 220px;
-  left: 109px;
+  bottom: -86px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
-    width: @tablet-width;
-  }
-
   .page-header__logo {
+    bottom: auto;
     top: 0;
-    left: @tablet-width/2 - 51px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: @desktop-width;
-  }
-
-  .page-header__logo {
-    left: @desktop-width/2 - 51px;
   }
 }

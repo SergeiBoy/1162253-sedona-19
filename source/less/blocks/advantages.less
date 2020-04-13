@@ -32,7 +32,7 @@
 }
 
 .advantages__title {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 
   padding: 0 30px;
 
@@ -47,11 +47,13 @@
 .advantages__wrapper-text {
   position: relative;
 
-  padding: 15px 40px;
+  padding: 5px 40px 15px 40px;
 }
 
 .advantages__item:first-child .advantages__wrapper-text,
 .advantages__item:nth-child(2) .advantages__wrapper-text {
+  padding-top: 40px;
+
   background-color: #81b3d2;
 }
 
@@ -63,13 +65,21 @@
   content: "";
 
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
 
   width: 320px;
   height: 37px;
 
   background: url("../img/bg-triangle.svg") 0 0 no-repeat;
+}
+
+.advantages__item img {
+  margin: 0 auto;
+
+  display: block;
+  height: 260px;
 }
 
 .advantages__item:nth-child(n+3) .advantages__wrapper-text::after {
@@ -78,8 +88,9 @@
   position: absolute;
   bottom: 0;
   left: 20px;
+  right: 20px;
 
-  width: 280px;
+  width: auto;
   height: 1px;
 
   background-color: rgba(0, 0, 0, 0.1);
@@ -101,7 +112,7 @@
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: 15px;
   }
 
   &--house::before {
@@ -133,7 +144,7 @@
   }
 
   .advantages__title {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   .advantages__facility-title,
@@ -146,25 +157,27 @@
     flex-wrap: wrap;
   }
 
-  .advantages__item:first-child .advantages__wrapper-text::before {
-    display: none;
-  }
-
   .advantages__item:first-child,
   .advantages__item:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .advantages__wrapper-text {
+    padding-top: 30px;
   }
 
   .advantages__item:first-child .advantages__wrapper-text,
   .advantages__item:nth-child(2) .advantages__wrapper-text {
     box-sizing: border-box;
-    width: 256px;
+    width: 33.33%;
+    padding-top: 30px;
   }
 
   .advantages__item:first-child img,
   .advantages__item:nth-child(2) img {
-    width: 512px;
+    width: 66.67%;
     height: 256px;
   }
 
@@ -172,8 +185,13 @@
     order: -1;
   }
 
+  .advantages__item:first-child .advantages__wrapper-text::before {
+    display: none;
+  }
+
   .advantages__facilities-list {
     margin-top: 40px;
+    margin-bottom: 20px;
 
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +208,8 @@
   .advantages__facility-title {
     &::before {
       top: 10px;
-      left: 90px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &--house::before {
@@ -220,19 +239,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .advantages__item:first-child .advantages__wrapper-text,
-  .advantages__item:nth-child(2) .advantages__wrapper-text {
-    width: 400px;
-  }
-
-  .advantages__item:first-child img,
-  .advantages__item:nth-child(2) img {
-    width: 800px;
-  }
-
-  .advantages__facility-title {
-    &::before {
-      left: 160px;
-    }
+  .advantages__facilities-list {
+    margin-bottom: 40px;
   }
 }
