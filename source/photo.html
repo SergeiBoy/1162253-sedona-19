@@ -4,13 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Фото и видео о Седоне</title>
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть / Закрыть меню</span></button>
@@ -45,7 +53,11 @@
         <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__image-link" href="#">
-              <img class="gallery__image gallery__image--first-photo" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Закат в горах, машина на дороге">
+              <picture class="gallery__picture gallery__picture--first-photo">
+                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                <img class="gallery__image gallery__image--first-photo" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Закат в горах, машина на дороге">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -57,7 +69,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__image-link" href="#">
-              <img class="gallery__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Цветущие кактусы на фоне гор">
+              <picture class="gallery__picture">
+                <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Цветущие кактусы на фоне гор">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -69,7 +85,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__image-link" href="#">
-              <img class="gallery__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Горная дорога среди леса">
+              <picture class="gallery__picture">
+                <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Горная дорога среди леса">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
@@ -81,7 +101,11 @@
           </li>
           <li class="gallery__item">
             <a class="gallery__image-link" href="#">
-              <img class="gallery__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Узкий горный перешеек">
+              <picture class="gallery__picture">
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="gallery__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Узкий горный перешеек">
+              </picture>
             </a>
             <div class="gallery__wrapper-text-counts">
               <div class="gallery__wrapper-text">
