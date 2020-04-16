@@ -4,13 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Поиск гостиниц в Седоне</title>
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седоны">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть / Закрыть меню</span></button>
@@ -49,7 +57,11 @@
               <p class="advantages__number advantages__number--white">— №1 —</p>
               <p class="advantages__description advantages__description--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Двухэтажный дом и дерево">
+            <picture class="advantages__picture">
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Двухэтажный дом и дерево">
+            </picture>
             <ul class="advantages__facilities-list">
               <li class="advantages__facility-item">
                 <h4 class="advantages__facility-title advantages__facility-title--house">Жилье</h4>
@@ -71,7 +83,11 @@
               <p class="advantages__number advantages__number--white">— №2 —</p>
               <p class="advantages__description advantages__description--white">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Узкий горный перешеек">
+            <picture class="advantages__picture">
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Узкий горный перешеек">
+            </picture>
           </li>
           <li class="advantages__item">
             <div class="advantages__wrapper-text">

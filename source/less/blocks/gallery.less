@@ -127,13 +127,22 @@
     width: 50%;
   }
 
-  .gallery__image {
+  .gallery__picture {
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 267px;
+
+    overflow: hidden;
 
     &--first-photo {
       height: 400px;
     }
+  }
+
+  .gallery__image {
+    width: 100%;
+    height: auto;
   }
 
   .gallery__wrapper-text-counts {

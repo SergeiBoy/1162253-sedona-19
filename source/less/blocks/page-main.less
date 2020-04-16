@@ -31,6 +31,11 @@
   background: #f2f2f2 url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
   overflow: hidden;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 768px 389px;
+  }
+
   &--inner-page {
     height: 158px;
     background-position: 50% 100%;
@@ -81,6 +86,11 @@
     height: 518px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1200px 518px;
+    }
 
     &--inner-page {
       height: 290px;
