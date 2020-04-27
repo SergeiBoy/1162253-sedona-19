@@ -8,7 +8,7 @@
       document.createElement("picture");
     </script>
     <script src="js/picturefill.min.js" async></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -70,11 +70,16 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано:</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg width="27" height="34"><use xlink:href="img/sprite.svg#sprite-logo-htmlacademy"></use></svg>
+        </a>
       </div>
     </footer>
 
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/script.js"></script>
   </body>
 </html>
