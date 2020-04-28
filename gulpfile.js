@@ -5,6 +5,9 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
@@ -58,6 +61,22 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("minify html", function () {
+  return gulp.src("build/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("compress js", function () {
+  return pipeline(
+    gulp.src("build/js/*.js"),
+    uglify(),
+    gulp.dest("build/js")
+  );
+});
+
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -96,6 +115,8 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "minify html",
+  "compress js",
   "images",
   "sprite",
   "webp"
