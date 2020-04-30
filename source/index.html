@@ -49,6 +49,12 @@
 
       <h1 class="page-main__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <div class="page-main__wrapper-sedona-welcome-image">
+        <picture class="page-main__picture">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-back-mobile@1x.webp 1x, img/bg-back-mobile@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x">
+          <img src="img/bg-back-mobile@1x.jpg" srcset="img/bg-back-mobile@2x.jpg 2x" width="768" height="389" alt="Красивый вид в горах">
+        </picture>
         <img class="page-main__sedona-text" src="img/text-sedona-index.svg" width="281" height="214" alt="Добро пожаловать в Седону">
       </div>
 
@@ -124,7 +130,20 @@
       </section>
 
       <section class="find-hotel">
-      Будет разработана позже
+        <h2 class="find-hotel__main-title visually-hidden">Поиск гостиницы в Седоне</h2>
+        <h3 class="find-hotel__title">Заинтересовались?</h3>
+        <p class="find-hotel__link-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="find-hotel__link" href="find-hotel.html">Найти гостиницу</a>
+        <div class="find-hotel__map map">
+          <picture class="map__picture">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <img src="img/bg-map-tablet@1x.jpg" srcset="img/bg-map-tablet@2x.jpg 2x" width="768" height="350" alt="Карта Седоны">
+          </picture>
+          <div class="map__google-map">
+          </div>
+        </div>
       </section>
 
     </main>
