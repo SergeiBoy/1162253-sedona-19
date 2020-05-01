@@ -3,7 +3,8 @@ var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
 var mapAddress = document.querySelector(".map__google-map");
-var mapWrapper = document.querySelector(".map__picture");
+var mapPicture = document.querySelector(".map__picture");
+var mapWrapper = document.querySelector(".map");
 var width = document.documentElement.clientWidth;
 
 navMain.classList.remove('main-nav--nojs');
@@ -23,7 +24,8 @@ function initMap() {
   var map = new google.maps.Map(mapAddress, {zoom: 8, center: uluru});
   var marker = new google.maps.Marker({position: uluru, map: map});
   mapAddress.style.zIndex = 1;
-  mapWrapper.style.display = "none";
+  mapPicture.style.display = "none";
+  mapWrapper.style.overflow = "visible";
 };
 
 var script = document.createElement("script");
@@ -34,13 +36,16 @@ document.body.appendChild(script);
 
 if (width > 320) {
   mapAddress.style.width = width + "px";
+  mapAddress.style.marginLeft = -(width/2) + "px";
 }
 
 window.addEventListener("resize", function (evt) {
   var width = document.documentElement.clientWidth;
   if (width > 320) {
     mapAddress.style.width = width + "px";
+    mapAddress.style.marginLeft = -(width/2) + "px";
   } else {
     mapAddress.style.width = "320px";
+    mapAddress.style.marginLeft = "-160px";
   }
 });
