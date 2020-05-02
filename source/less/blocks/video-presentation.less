@@ -1,4 +1,157 @@
 
 .video-presentation {
-  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.video-presentation__title {
+  margin-top: 7px;
+  margin-bottom: 25px;
+
+  padding: 0 20px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.video-presentation__promotion {
+  margin-bottom: 35px;
+
+  padding: 0 30px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: #333333;
+}
+
+.video-presentation__image {
+  margin: 0 auto;
+
+  display: block;
+}
+
+.video-presentation__upper-module {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -45px;
+
+  width: 280px;
+  height: 45px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video-presentation__lower-module {
+  position: relative;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 280px;
+  height: 66px;
+  padding-left: 20px;
+  padding-right: 14px;
+
+  background-color: #f2f2f2;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -22px;
+    left: 22px;
+
+    display: block;
+    width: 235px;
+    height: 3px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -25px;
+    left: 58px;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+.video-presentation__lower-module svg {
+  fill: #5c6870;
+}
+
+.video-presentation__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 97px;
+}
+
+.video-presentation__control {
+  border: none;
+  background-color: transparent;
+}
+
+.video-presentation__control--ie11-bug-space-between-fixing {
+  margin-right: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .video-presentation__image {
+    width: 648px;
+    height: 499px;
+  }
+
+  .video-presentation__upper-module {
+    display: none;
+  }
+
+  .video-presentation__lower-module {
+    margin-top: -93px;
+
+    width: 648px;
+    height: 93px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    &::before {
+      top: 40px;
+      left: 90px;
+
+      width: 389px;
+      height: 3px;
+    }
+
+    &::after {
+      top: 36px;
+      left: 170px;
+    }
+  }
+
+  .video-presentation__lower-module svg {
+    fill: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video-presentation__image {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video-presentation__lower-module {
+    width: 800px;
+  }
 }
