@@ -1,0 +1,253 @@
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__fieldset-form {
+  .reset-list;
+}
+
+.form__fieldset {
+  margin-top: 20px;
+
+  width: 280px;
+  padding: 0 20px;
+
+  border: none;
+}
+
+.form__fieldset-title,
+.form__label-toggle-input {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form__fieldset-title {
+  margin-bottom: 20px;
+}
+
+.form__label-toggle-input {
+  padding-left: 80px;
+
+  text-transform: none;
+}
+
+.form__label-text-input {
+  margin-right: 8px;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.form input::-moz-placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form input::placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form textarea::-moz-placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form textarea::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form textarea::placeholder {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form__list-item {
+  position: relative;
+  margin-bottom: 30px;
+
+  &--person-naming {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--tel::before,
+  &--email::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background: #e6e6e6 url("../img/icon-phone.svg") 50% 50% no-repeat;
+  }
+
+  &--email::before {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.form__input-text {
+  box-sizing: border-box;
+  width: 193px;
+  height: 58px;
+  padding: 16px 22px;
+
+  border: 0;
+  background-color: #f2f2f2;
+
+  &--name {
+    width: 230px;
+  }
+
+  &--tel,
+  &--email {
+    width: 280px;
+    padding-right: 65px;
+  }
+}
+
+.form__input-toggle {
+  display: none;
+}
+
+.form__input-toggle + .form__label-toggle-input-radio::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.form__input-toggle:checked + .form__label-toggle-input-radio::after {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.form__input-toggle + .form__label-toggle-input-checkbox::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.form__input-toggle:checked + .form__label-toggle-input-checkbox::after {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 24px;
+  height: 16px;
+
+
+  background: url("../img/icon-tick.svg") 0 0 no-repeat;
+}
+
+.form__input-toggle:enabled + label:hover::before,
+.form__input-toggle:enabled:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+.form__input-toggle:enabled + label:active::before,
+.form__input-toggle:enabled:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.form__input-toggle:enabled + label:active::after,
+.form__input-toggle:enabled:active + label::after {
+  opacity: 0.3;
+}
+
+.form__input-toggle:disabled + label {
+  opacity: 0.3;
+}
+
+.form__textarea {
+  width: 280px;
+  min-height: 160px;
+  padding: 22px;
+
+  border: 0;
+  background-color: #f2f2f2;
+  resize: none;
+}
+
+.form__submit-button {
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 50px;
+
+  width: 240px;
+  padding: 16px 20px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border: 0;
+  background-color: #81b3d2;
+}
+
+.form__comment {
+  display: none;
+
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #333333;
+}
