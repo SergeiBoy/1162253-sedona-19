@@ -59,11 +59,11 @@
       </div>
 
       <section class="leave-comment">
-        <h2 class="leave-comment__title">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</h2>
+        <h2 class="leave-comment__title">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</h2>
         <form class="leave-comment__form form" action="form.html" method="post">
           <h3 class="form__title visually-hidden">Форма отзыва</h3>
-          <fieldset class="form__fieldset">
-            <legend class="form__fieldset-title">Представьтесь:</legend>
+          <fieldset class="form__fieldset form__fieldset--person-naming">
+            <legend class="form__fieldset-title form__fieldset-title--person-naming">Представьтесь:</legend>
             <ul class="form__fieldset-form">
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="name">Имя*:</label>
@@ -79,59 +79,59 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__fieldset-title">Контактная информация:</legend>
+          <fieldset class="form__fieldset form__fieldset--contact-info">
+            <legend class="form__fieldset-title form__fieldset-title--contact-info">Контактная информация:</legend>
             <ul class="form__fieldset-form">
               <li class="form__list-item form__list-item--tel">
-                <label class="form__label-text-input" for="tel">Контактный телефон*:</label><br class="form__break">
-                <input class="form__input-text form__input-text--tel" type="tel" name="tel" placeholder="Введите телефон" id="tel">
+                <label class="form__label-text-input form__label-text-input--tel" for="tel">Контактный телефон*:</label><br class="form__break">
+                <input class="form__input-text form__input-text--tel" type="tel" name="tel" placeholder="Введите телефон" id="tel" pattern="[0-9]{1,15}">
               </li>
               <li class="form__list-item form__list-item--email">
-                <label class="form__label-text-input" for="email">Электронная почта*:</label><br class="form__break">
+                <label class="form__label-text-input form__label-text-input--email" for="email">Электронная почта*:</label><br class="form__break">
                 <input class="form__input-text form__input-text--email" type="email" name="email" placeholder="Введите e-mail" id="email">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__fieldset-title">Ваше общее впечатление:</legend>
+          <fieldset class="form__fieldset form__fieldset--impression">
+            <legend class="form__fieldset-title form__fieldset-title--impression">Ваше общее впечатление:</legend>
             <ul class="form__fieldset-form">
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--impression">
                 <input class="form__input-toggle" type="radio" name="impression" value="positive" id="positive" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="positive">Скорее положительное</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--impression">
                 <input class="form__input-toggle" type="radio" name="impression" value="negative" id="negative">
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="negative">Скорее отрицательное</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--impression">
                 <input class="form__input-toggle" type="radio" name="impression" value="undefined" id="undefined">
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="undefined">Затрудняюсь ответить</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__fieldset-title">Посещенные достопримечательности:</legend>
-            <ul class="form__fieldset-form">
-              <li class="form__list-item">
+          <fieldset class="form__fieldset form__fieldset--sights">
+            <legend class="form__fieldset-title form__fieldset-title--sights">Посещенные достопримечательности:</legend>
+            <ul class="form__fieldset-form form__fieldset-form--sights">
+              <li class="form__list-item form__list-item--sights">
                 <input class="form__input-toggle" type="checkbox" name="sights-devil-bridge" value="devil-bridge" id="devil-bridge" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="devil-bridge">Мост Дьявола</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--sights">
                 <input class="form__input-toggle" type="checkbox" name="sights-mountain-bell" value="mountain-bell" id="mountain-bell" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="mountain-bell">Гора-Колокол</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--sights">
                 <input class="form__input-toggle" type="checkbox" name="sights-slide-park" value="slide-park" id="slide-park" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="slide-park">Слайд-парк</label>
               </li>
-              <li class="form__list-item">
+              <li class="form__list-item form__list-item--sights">
                 <input class="form__input-toggle" type="checkbox" name="sights-red-rocks" value="red-rocks" id="red-rocks">
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="red-rocks">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__fieldset-title">Опишите свои эмоции:</legend>
+          <fieldset class="form__fieldset form__fieldset--emotions">
+            <legend class="form__fieldset-title form__fieldset-title--emotions">Опишите свои эмоции:</legend>
             <textarea class="form__textarea" name="message" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="form__submit-button" type="submit">Отправить отзыв</button>
