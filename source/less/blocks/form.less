@@ -185,8 +185,7 @@
 
   &--tel,
   &--email {
-    width: 280px;
-    padding-right: 65px;
+    width: 222px;
     margin-top: 7px;
   }
 }
@@ -456,7 +455,7 @@
 
     &--tel,
     &--email {
-      width: 648px;
+      width: 590px;
     }
   }
 
@@ -476,5 +475,119 @@
     margin-top: 72px;
 
     display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 960px;
+  }
+
+  .form__fieldset {
+    margin-top: 47px;
+
+    &--person-naming,
+    &--impression {
+      width: 400px;
+    }
+
+    &--contact-info {
+      margin-top: 27px;
+    }
+
+    &--sights {
+      margin-top: 30px;
+    }
+
+    &--emotions {
+      margin-top: 20px;
+    }
+  }
+
+  .form__fieldset-title {
+    &--impression {
+      padding-left: 78px;
+    }
+
+    &--sights {
+      padding: 0 290px;
+    }
+
+    &--impression::after {
+      right: -79px;
+    }
+
+    &--contact-info::before,
+    &--contact-info::after,
+    &--sights::before,
+    &--sights::after,
+    &--emotions::before,
+    &--emotions::after {
+      width: 280px;
+    }
+  }
+
+  .form__fieldset-form {
+    &--contact-info {
+      margin-top: 45px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &--sights {
+      margin: 0;
+
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .form__list-item {
+    &--tel,
+    &--email {
+      padding-right: 57px;
+    }
+
+    &--sights {
+      min-width: 150px;
+    }
+  }
+
+  .form__label-toggle-input-radio {
+    padding-left: 80px;
+  }
+
+  .form__label-text-input--email,
+  .form__label-text-input--tel {
+    margin-left: 0;
+  }
+
+  .form__input-text {
+    width: 313px;
+
+    &--name {
+      width: 350px;
+    }
+
+    &--tel,
+    &--email {
+      width: 257px;
+    }
+  }
+
+  .form__textarea {
+    width: 960px;
+  }
+
+  .form__submit-button {
+    margin-bottom: 67px;
+
+    width: 480px;
+  }
+
+  .form__span-hiding-word {
+    display: none;
   }
 }
