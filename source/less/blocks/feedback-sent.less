@@ -10,7 +10,7 @@
   min-height: 323px;
 
   background-color: #ffffff;
-  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .feedback-sent__text-wrapper {
@@ -63,6 +63,23 @@
 
   border: 0;
   background-color: #81b3d2;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    color: #ffffff;
+
+    background-color: #e5e5e5;
+  }
 }
 
 @media (min-width: @tablet-width) {
