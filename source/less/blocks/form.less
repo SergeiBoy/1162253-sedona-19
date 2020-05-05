@@ -176,7 +176,7 @@
   height: 58px;
   padding: 16px 22px;
 
-  border: 0;
+  border: 4px solid #f2f2f2;
   background-color: #f2f2f2;
 
   &--name {
@@ -187,6 +187,17 @@
   &--email {
     width: 222px;
     margin-top: 7px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: #e5e5e5;
+    background-color: #ffffff;
   }
 }
 
@@ -277,6 +288,16 @@
   border: 0;
   background-color: #f2f2f2;
   resize: none;
+
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown) {
+    border: 4px solid #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 .form__submit-button {
@@ -455,7 +476,7 @@
 
     &--tel,
     &--email {
-      width: 590px;
+      width: 586px;
     }
   }
 

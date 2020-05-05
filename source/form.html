@@ -60,7 +60,7 @@
 
       <section class="leave-comment">
         <h2 class="leave-comment__title">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</h2>
-        <form class="leave-comment__form form" action="form.html" method="post">
+        <form class="leave-comment__form form" action="form.html" method="get">
           <h3 class="form__title visually-hidden">Форма отзыва</h3>
           <fieldset class="form__fieldset form__fieldset--person-naming">
             <legend class="form__fieldset-title form__fieldset-title--person-naming">Представьтесь:</legend>
@@ -71,7 +71,7 @@
               </li>
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="surname">Фамилия*:</label>
-                <input class="form__input-text" type="text" name="surname" placeholder="Иванов" id="surname">
+                <input class="form__input-text form__input-text--surname" type="text" name="surname" placeholder="Иванов" id="surname">
               </li>
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="middle-name">Отчество:</label>
@@ -164,6 +164,22 @@
         </a>
       </div>
     </footer>
+
+    <section class="blank-fields">
+      <h1 class="blank-fields__title">Что-то пошло не так!</h1>
+      <p class="blank-fields__instruction">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="blank-fields__close-button" type="button">Ок</button>
+    </section>
+
+    <section class="feedback-sent">
+      <div class="feedback-sent__text-wrapper">
+        <h1 class="feedback-sent__title">Ваш отзыв отправлен!</h1>
+        <p class="feedback-sent__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="feedback-sent__button-wrapper">
+        <button class="feedback-sent__close-button" type="button">Закрыть окно</button>
+      </div>
+    </section>
 
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
