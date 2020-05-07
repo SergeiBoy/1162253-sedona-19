@@ -16,6 +16,7 @@ var popupBlankFields = document.querySelector(".blank-fields");
 var popupSent = document.querySelector(".feedback-sent");
 var popupBlankFieldsClose = document.querySelector(".blank-fields__close-button");
 var popupSentClose = document.querySelector(".feedback-sent__close-button");
+var inputMassiv = [personName, personSurname, personTel, personEmail];
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -39,12 +40,6 @@ if (mapAddress) {
     mapWrapper.style.overflow = "visible";
   };
 
-  var script = document.createElement("script");
-  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD3BpFqzWP_ymtXwTlGLCK0ujLH9BBKCJo&callback=initMap";
-  script.async = true;
-  script.defer = true;
-  document.body.appendChild(script);
-
   if (width > 320) {
     mapAddress.style.width = width + "px";
     mapAddress.style.marginLeft = -(width/2) + "px";
@@ -66,21 +61,32 @@ if (form) {
   form.addEventListener("submit", function (evt) {
     if (!personName.value || !personSurname.value || !personTel.value || !personEmail.value) {
       evt.preventDefault();
-      if (!personName.value) {
-        personName.style.borderColor = "red";
-      }
-      if (!personSurname.value) {
-        personSurname.style.borderColor = "red";
-      }
-      if (!personTel.value) {
-        personTel.style.borderColor = "red";
-      }
-      if (!personEmail.value) {
-        personEmail.style.borderColor = "red";
-      }
+      inputMassiv.forEach(function(item) {
+        if (!item.value) {
+          item.classList.add("form__input-text--error");
+        }
+      });
       popupBlankFields.style.display = "block";
     } else {
       popupSent.style.display = "block";
+    }
+  });
+
+  inputMassiv.forEach(function(item) {
+    item.addEventListener("input", function (evt) {
+      if (item.value) {
+        item.classList.remove("form__input-text--error");
+      } else {
+        item.classList.add("form__input-text--error");
+      }
+    });
+  });
+
+  personName.addEventListener("input", function (evt) {
+    if (personName.value) {
+      personName.classList.remove("form__input-text--error");
+    } else {
+      personName.classList.add("form__input-text--error");
     }
   });
 
