@@ -58,6 +58,11 @@ if (mapAddress) {
 }
 
 if (form) {
+
+  inputMassiv.forEach(function(item) {
+    item.required = false;
+  });
+
   form.addEventListener("submit", function (evt) {
     if (!personName.value || !personSurname.value || !personTel.value || !personEmail.value) {
       evt.preventDefault();
@@ -65,28 +70,17 @@ if (form) {
         if (!item.value) {
           item.classList.add("form__input-text--error");
         }
+        item.addEventListener("input", function (evt) {
+          if (item.value) {
+            item.classList.remove("form__input-text--error");
+          } else {
+            item.classList.add("form__input-text--error");
+          }
+        });
       });
       popupBlankFields.style.display = "block";
     } else {
       popupSent.style.display = "block";
-    }
-  });
-
-  inputMassiv.forEach(function(item) {
-    item.addEventListener("input", function (evt) {
-      if (item.value) {
-        item.classList.remove("form__input-text--error");
-      } else {
-        item.classList.add("form__input-text--error");
-      }
-    });
-  });
-
-  personName.addEventListener("input", function (evt) {
-    if (personName.value) {
-      personName.classList.remove("form__input-text--error");
-    } else {
-      personName.classList.add("form__input-text--error");
     }
   });
 

@@ -67,11 +67,11 @@
             <ul class="form__fieldset-form">
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="name">Имя*:</label>
-                <input class="form__input-text form__input-text--name" type="text" name="name" placeholder="Петр" id="name">
+                <input class="form__input-text form__input-text--name" type="text" name="name" placeholder="Петр" id="name" required>
               </li>
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="surname">Фамилия*:</label>
-                <input class="form__input-text form__input-text--surname" type="text" name="surname" placeholder="Иванов" id="surname">
+                <input class="form__input-text form__input-text--surname" type="text" name="surname" placeholder="Иванов" id="surname" required>
               </li>
               <li class="form__list-item form__list-item--person-naming">
                 <label class="form__label-text-input" for="middle-name">Отчество:</label>
@@ -84,11 +84,11 @@
             <ul class="form__fieldset-form form__fieldset-form--contact-info">
               <li class="form__list-item form__list-item--tel">
                 <label class="form__label-text-input form__label-text-input--tel" for="tel"><span class="form__span-hiding-word">Контактный</span> телефон*:</label>
-                <input class="form__input-text form__input-text--tel" type="tel" name="tel" placeholder="Введите телефон" id="tel" pattern="[0-9]{1,15}">
+                <input class="form__input-text form__input-text--tel" type="tel" name="tel" placeholder="Введите телефон" id="tel" pattern="[0-9]{1,15}" required>
               </li>
               <li class="form__list-item form__list-item--email">
                 <label class="form__label-text-input form__label-text-input--email" for="email">Электронная почта*:</label>
-                <input class="form__input-text form__input-text--email" type="email" name="email" placeholder="Введите e-mail" id="email">
+                <input class="form__input-text form__input-text--email" type="email" name="email" placeholder="Введите e-mail" id="email" required>
               </li>
             </ul>
           </fieldset>
