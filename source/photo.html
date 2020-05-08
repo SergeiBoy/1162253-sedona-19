@@ -32,7 +32,7 @@
               <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a class="site-list__link">Фото и видео</a>
+              <a class="site-list__link site-list__link--active">Фото и видео</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">Форма отзыва</a>
@@ -49,11 +49,17 @@
 
       <h1 class="page-main__title page-main__title--inner-page">Фото и видео</h1>
       <div class="page-main__wrapper-sedona-welcome-image page-main__wrapper-sedona-welcome-image--inner-page">
+        <picture class="page-main__picture page-main__picture--inner-page">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-back-desktop@1x.webp 1x, img/bg-back-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-back-mobile@1x.webp 1x, img/bg-back-mobile@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-back-desktop@1x.jpg 1x, img/bg-back-desktop@2x.jpg 2x">
+          <img src="img/bg-back-mobile@1x.jpg" srcset="img/bg-back-mobile@2x.jpg 2x" width="768" height="389" alt="Красивый вид в горах">
+        </picture>
         <img class="page-main__sedona-text page-main__sedona-text--inner-page" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
       </div>
 
       <section class="gallery">
-        <h2 class="gallery__title">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</h2>
+        <h2 class="gallery__title">Не можете решиться на путешествие из-за курса?&nbsp;<br class="gallery__break">Фотографии помогут вам забыть о политике и экономике.</h2>
         <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__image-link" href="#">
@@ -135,13 +141,38 @@
       </section>
 
       <section class="video-presentation">
-      Будет разработана позже
+        <h2 class="video-presentation__main-title visually-hidden">Видеопрезентация</h2>
+        <h3 class="video-presentation__title">Все еще сомневаетесь?</h3>
+        <p class="video-presentation__promotion">Смотрите видеопрезентацию и скорее за билетами, пока&nbsp;<br class="video-presentation__break">они не подорожали в очередной раз!</p>
+        <picture class="video-presentation__picture">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+          <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="video-presentation__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="320" height="201" alt="Машины на дороге в горах">
+        </picture>
+        <div class="video-presentation__upper-module">
+        </div>
+        <div class="video-presentation__lower-module">
+          <button class="video-presentation__control video-presentation__control--ie11-bug-space-between-fixing" type="button">
+            <svg width="16" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-replay"></use></svg>
+          </button>
+          <div class="video-presentation__controls-wrapper">
+            <button class="video-presentation__control" type="button">
+              <svg width="32" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-subtitles"></use></svg>
+            </button>
+            <button class="video-presentation__control" type="button">
+              <svg width="20" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-fullscreen"></use></svg>
+            </button>
+          </div>
+        </div>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__link-to-sedona">#VisitSedona</a>
+      <a href="index.html" class="page-footer__link-to-sedona page-footer__link-to-sedona--inner-page">#VisitSedona</a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">

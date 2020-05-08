@@ -1,0 +1,95 @@
+
+.blank-fields {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  display: none;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 280px;
+  padding: 27px 50px;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.blank-fields__title {
+  margin-bottom: 26px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.blank-fields__instruction {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.blank-fields__close-button {
+  margin-top: 8px;
+
+  width: 180px;
+  padding: 16px 20px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  border: 0;
+  background-color: #81b3d2;
+
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #5496bd;
+  }
+
+  &:disabled {
+    color: #ffffff;
+
+    background-color: #e5e5e5;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .blank-fields {
+    width: 400px;
+    min-height: 347px;
+  }
+
+  .blank-fields__title {
+    margin-top: 30px;
+    margin-bottom: 24px;
+
+    padding: 0 40px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .blank-fields__close-button {
+    margin-top: 17px;
+
+    width: 272px;
+
+    font-size: 21px;
+  }
+}
