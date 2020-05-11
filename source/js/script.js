@@ -16,7 +16,7 @@ var popupBlankFields = document.querySelector(".blank-fields");
 var popupSent = document.querySelector(".feedback-sent");
 var popupBlankFieldsClose = document.querySelector(".blank-fields__close-button");
 var popupSentClose = document.querySelector(".feedback-sent__close-button");
-var inputMassiv = [personName, personSurname, personTel, personEmail];
+var inputRequiredArray = [personName, personSurname, personTel, personEmail];
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -59,14 +59,14 @@ if (mapAddress) {
 
 if (form) {
 
-  inputMassiv.forEach(function(item) {
+  inputRequiredArray.forEach(function(item) {
     item.required = false;
   });
 
   form.addEventListener("submit", function (evt) {
     if (!personName.value || !personSurname.value || !personTel.value || !personEmail.value) {
       evt.preventDefault();
-      inputMassiv.forEach(function(item) {
+      inputRequiredArray.forEach(function(item) {
         if (!item.value) {
           item.classList.add("form__input-text--error");
         }
