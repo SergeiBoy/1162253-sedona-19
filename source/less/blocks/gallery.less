@@ -93,10 +93,11 @@
     top: 0;
     left: 0;
 
-    width: 23px;
-    height: 21px;
+    width: 22px;
+    height: 20px;
 
-    background: url("../img/icon-like.svg") 0 0 no-repeat;
+    background: url("../img/icon-like-style.svg") 0 0 no-repeat;
+    background-size: cover;
     opacity: 0.3;
   }
 }
@@ -224,5 +225,14 @@
 
   .gallery__image-author {
     color: #ffffff;
+  }
+
+  .gallery__image-counts {
+    &::before {
+      width: 23px;
+      height: 21px;
+
+      opacity: 1;
+    }
   }
 }
