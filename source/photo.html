@@ -17,7 +17,7 @@
   <body>
 
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
+      <a href="index.html" class="page-header__logo" aria-label="Переход на главную страницу">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -59,10 +59,10 @@
       </div>
 
       <section class="gallery">
-        <h2 class="gallery__title">Не можете решиться на путешествие из-за курса?&nbsp;<br class="gallery__break">Фотографии помогут вам забыть о политике и экономике.</h2>
+        <h2 class="gallery__title">Не можете решиться на путешествие из-за курса?&nbsp;<br class="gallery__break">Фотографии помогут вам&nbsp;забыть о политике и экономике.</h2>
         <ul class="gallery__list">
           <li class="gallery__item">
-            <a class="gallery__image-link" href="#">
+            <a class="gallery__image-link" href="img/photo-sunset-desktop@1x.jpg" aria-label="Открытие полноразмерного изображения">
               <picture class="gallery__picture gallery__picture--first-photo">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
@@ -81,7 +81,7 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a class="gallery__image-link" href="#">
+            <a class="gallery__image-link" href="img/photo-cactus-desktop@1x.jpg" aria-label="Открытие полноразмерного изображения">
               <picture class="gallery__picture">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
@@ -100,7 +100,7 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a class="gallery__image-link" href="#">
+            <a class="gallery__image-link" href="img/photo-roads-desktop@1x.jpg" aria-label="Открытие полноразмерного изображения">
               <picture class="gallery__picture">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
@@ -119,7 +119,7 @@
             </div>
           </li>
           <li class="gallery__item">
-            <a class="gallery__image-link" href="#">
+            <a class="gallery__image-link" href="img/photo-bridge-desktop@1x.jpg" aria-label="Открытие полноразмерного изображения">
               <picture class="gallery__picture">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
@@ -155,14 +155,14 @@
         <div class="video-presentation__upper-module">
         </div>
         <div class="video-presentation__lower-module">
-          <button class="video-presentation__control video-presentation__control--ie11-bug-space-between-fixing" type="button">
+          <button class="video-presentation__control video-presentation__control--ie11-bug-space-between-fixing" type="button" aria-label="Воспроизведение видео">
             <svg width="16" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-replay"></use></svg>
           </button>
           <div class="video-presentation__controls-wrapper">
-            <button class="video-presentation__control" type="button">
+            <button class="video-presentation__control" type="button" aria-label="Субтитры">
               <svg width="32" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-subtitles"></use></svg>
             </button>
-            <button class="video-presentation__control" type="button">
+            <button class="video-presentation__control" type="button" aria-label="Во весь экран">
               <svg width="20" height="20"><use xlink:href="img/sprite.svg#sprite-icon-video-fullscreen"></use></svg>
             </button>
           </div>
@@ -172,20 +172,18 @@
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__link-to-sedona page-footer__link-to-sedona--inner-page">#VisitSedona</a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в YouTube</a>
-          </li>
-        </ul>
-      </div>
+      <a href="index.html" class="page-footer__link-to-sedona page-footer__link-to-sedona--inner-page" aria-label="Переход на главную страницу">#VisitSedona</a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в YouTube</a>
+        </li>
+      </ul>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">

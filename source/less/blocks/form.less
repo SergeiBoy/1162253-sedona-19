@@ -206,10 +206,6 @@
   }
 }
 
-.form__input-toggle {
-  display: none;
-}
-
 .form__input-toggle + .form__label-toggle-input-radio::before {
   content: "";
 
@@ -583,7 +579,6 @@
     &--sights {
       margin: 0;
 
-      justify-content: space-between;
       width: 100%;
     }
   }
@@ -591,11 +586,26 @@
   .form__list-item {
     &--tel,
     &--email {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       padding-right: 57px;
     }
 
+    &--tel {
+      margin-right: 40px;
+    }
+
     &--sights {
-      min-width: 150px;
+      min-width: 259px;
+    }
+
+    &--sights:nth-child(3) {
+      min-width: 235px;
+    }
+
+    &--sights:nth-child(4) {
+      min-width: 200px;
     }
   }
 
@@ -603,9 +613,13 @@
     padding-left: 80px;
   }
 
-  .form__label-text-input--email,
-  .form__label-text-input--tel {
-    margin-left: 0;
+  .form__label-text-input {
+    &--email,
+    &--tel {
+      margin-top: 5px;
+      margin-right: 16px;
+      margin-left: 0;
+    }
   }
 
   .form__input-text {
@@ -617,6 +631,7 @@
 
     &--tel,
     &--email {
+      align-self: flex-end;
       width: 257px;
     }
   }

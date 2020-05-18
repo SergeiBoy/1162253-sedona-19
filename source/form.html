@@ -17,7 +17,7 @@
   <body>
 
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
+      <a href="index.html" class="page-header__logo" aria-label="Переход на главную страницу">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -96,15 +96,15 @@
             <legend class="form__fieldset-title form__fieldset-title--impression">Ваше общее впечатление:</legend>
             <ul class="form__fieldset-form">
               <li class="form__list-item form__list-item--impression">
-                <input class="form__input-toggle" type="radio" name="impression" value="positive" id="positive" checked>
+                <input class="form__input-toggle visually-hidden" type="radio" name="impression" value="positive" id="positive" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="positive">Скорее положительное</label>
               </li>
               <li class="form__list-item form__list-item--impression">
-                <input class="form__input-toggle" type="radio" name="impression" value="negative" id="negative">
+                <input class="form__input-toggle visually-hidden" type="radio" name="impression" value="negative" id="negative">
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="negative">Скорее отрицательное</label>
               </li>
               <li class="form__list-item form__list-item--impression">
-                <input class="form__input-toggle" type="radio" name="impression" value="undefined" id="undefined">
+                <input class="form__input-toggle visually-hidden" type="radio" name="impression" value="undefined" id="undefined">
                 <label class="form__label-toggle-input form__label-toggle-input-radio" for="undefined">Затрудняюсь ответить</label>
               </li>
             </ul>
@@ -113,19 +113,19 @@
             <legend class="form__fieldset-title form__fieldset-title--sights">Посещенные достопримечательности:</legend>
             <ul class="form__fieldset-form form__fieldset-form--sights">
               <li class="form__list-item form__list-item--sights">
-                <input class="form__input-toggle" type="checkbox" name="sights-devil-bridge" value="devil-bridge" id="devil-bridge" checked>
+                <input class="form__input-toggle visually-hidden" type="checkbox" name="sights-devil-bridge" value="devil-bridge" id="devil-bridge" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="devil-bridge">Мост Дьявола</label>
               </li>
               <li class="form__list-item form__list-item--sights">
-                <input class="form__input-toggle" type="checkbox" name="sights-mountain-bell" value="mountain-bell" id="mountain-bell" checked>
+                <input class="form__input-toggle visually-hidden" type="checkbox" name="sights-mountain-bell" value="mountain-bell" id="mountain-bell" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="mountain-bell">Гора-Колокол</label>
               </li>
               <li class="form__list-item form__list-item--sights">
-                <input class="form__input-toggle" type="checkbox" name="sights-slide-park" value="slide-park" id="slide-park" checked>
+                <input class="form__input-toggle visually-hidden" type="checkbox" name="sights-slide-park" value="slide-park" id="slide-park" checked>
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="slide-park">Слайд-парк</label>
               </li>
               <li class="form__list-item form__list-item--sights">
-                <input class="form__input-toggle" type="checkbox" name="sights-red-rocks" value="red-rocks" id="red-rocks">
+                <input class="form__input-toggle visually-hidden" type="checkbox" name="sights-red-rocks" value="red-rocks" id="red-rocks">
                 <label class="form__label-toggle-input form__label-toggle-input-checkbox" for="red-rocks">Красные скалы</label>
               </li>
             </ul>
@@ -142,20 +142,18 @@
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__link-to-sedona page-footer__link-to-sedona--inner-page">#VisitSedona</a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в YouTube</a>
-          </li>
-        </ul>
-      </div>
+      <a href="index.html" class="page-footer__link-to-sedona page-footer__link-to-sedona--inner-page" aria-label="Переход на главную страницу">#VisitSedona</a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в YouTube</a>
+        </li>
+      </ul>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
