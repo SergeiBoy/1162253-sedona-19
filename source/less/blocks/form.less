@@ -478,7 +478,9 @@
     &--sights {
       margin-bottom: 60px;
 
+      box-sizing: border-box;
       min-width: 260px;
+      padding-right: 30px;
     }
   }
 
@@ -550,7 +552,9 @@
     }
 
     &--sights {
-      padding: 0 290px;
+      box-sizing: border-box;
+      min-width: 990px;
+      padding: 0 320px 0 290px;
     }
 
     &--impression::after {
@@ -564,6 +568,11 @@
     &--emotions::before,
     &--emotions::after {
       width: 280px;
+    }
+
+    &--sights::after {
+      right: auto;
+      left: 680px;
     }
   }
 
@@ -579,7 +588,7 @@
     &--sights {
       margin: 0;
 
-      width: 100%;
+      width: 990px;
     }
   }
 
